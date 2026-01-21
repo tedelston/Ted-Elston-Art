@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - [YOUR NAME]</title>
+    <title>Gallery - Ted Elston Art</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
     
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
     
@@ -70,7 +72,12 @@
             text-decoration: none;
             letter-spacing: 2px;
         }
-
+        /* --- NEW: Added Logo Image Styling from Homepage --- */
+        nav .logo img {
+            height: 50px; 
+            width: auto;  
+            display: block;
+        }    
         nav ul {
             display: flex;
             list-style: none;
@@ -235,7 +242,11 @@
                 gap: 1rem;
                 justify-content: center;
             }
-
+            nav .logo img {
+                height: 50px;
+                width: auto;
+                display: block;
+            }
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
@@ -425,3 +436,4 @@
 </body>
 
 </html>
+
