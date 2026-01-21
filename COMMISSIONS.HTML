@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions - [YOUR NAME]</title>
+    
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --soft-black: #2a2a2a;
+            --soft-white: #f8f7f4;
+            --gold: #c9a961;
+            --gold-dark: #a88a4d;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--soft-white);
+            color: var(--soft-black);
+            line-height: 1.6;
+        }
+
+        /* Image Protection */
+        img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        nav img,
+        button,
+        a,
+        .snipcart-checkout,
+        input,
+        textarea,
+        select {
+            pointer-events: auto;
+        }
+
+        nav {
+            background-color: var(--soft-black);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--soft-white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
+
+        .cart-button {
+            background-color: var(--gold);
+            color: var(--soft-black);
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            background-color: var(--soft-black);
+            color: var(--soft-white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .commissions-section {
+            padding: 5rem 0;
+        }
+
+        .commission-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .commission-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .commission-intro p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .process-section {
+            margin-bottom: 4rem;
+        }
+
+        .process-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--soft-black);
+            letter-spacing: 1px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .step {
+            background-color: #eeede8;
+            padding: 2rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .step-number {
+            background-color: var(--gold);
+            color: var(--soft-black);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .commission-form {
+            background-color: #eeede8;
+            padding: 3rem;
+            border-radius: 4px;
+        }
+
+        .commission-form h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--soft-black);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--soft-black);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: var(--soft-white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-button {
+            background-color: var(--gold);
+            color: var(--soft-black);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            letter-spacing: 1px;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: var(--gold-dark);
+            color: var(--soft-white);
+        }
+
+        footer {
+            background-color: var(--soft-black);
+            color: var(--soft-white);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .commission-form {
+                padding: 2rem;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">[YOUR NAME]</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="commissions.html" class="active">Commissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="snipcart-checkout cart-button">Cart (<span class="snipcart-items-count"></span>)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Commission a Painting</h1>
+        </div>
+    </div>
+
+    <section class="commissions-section">
+        <div class="container">
+            <div class="commission-content">
+                
+                <div class="commission-intro">
+                    <p>[PLACEHOLDER: Describe what types of commissions you accept - portraits, landscapes, still life, abstracts, etc.]</p>
+                    <p>[PLACEHOLDER: Explain your approach to commissions - how you work with clients, your style flexibility, what makes your commission process special]</p>
+                </div>
+
+                <div class="process-section">
+                    <h2>Commission Process</h2>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Initial Consultation</h3>
+                            <p>We discuss your vision, preferences, and requirements for the piece.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Proposal & Quote</h3>
+                            <p>I provide a detailed proposal with timeline and pricing based on your needs.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Creation</h3>
+                            <p>I begin work on your piece, providing updates throughout the process.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h3>Delivery</h3>
+                            <p>Your finished painting is carefully packaged and delivered to you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="commission-form">
+                    <h2>Start Your Commission</h2>
+                    <form action="[PLACEHOLDER: Your form handler URL - e.g., https://formspree.io/f/YOUR_FORM_ID]" method="POST">
+                        
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject Type *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select subject type...</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                                <option value="still-life">Still Life</option>
+                                <option value="abstract">Abstract</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="size">Desired Size</label>
+                            <input type="text" id="size" name="size" placeholder="e.g., 24x36 inches, 60x90 cm">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Timeline/Deadline</label>
+                            <input type="text" id="timeline" name="timeline" placeholder="When do you need it completed?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range (Optional)</label>
+                            <input type="text" id="budget" name="budget" placeholder="Your budget range">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" name="description" required placeholder="Please describe your vision for the commission in detail. Include information about colors, mood, style preferences, reference images you have, and any other important details."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Submit Commission Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="[PLACEHOLDER: Instagram URL]" target="_blank">Instagram</a>
+                <a href="[PLACEHOLDER: Facebook URL]" target="_blank">Facebook</a>
+                <a href="mailto:[PLACEHOLDER: Your email]">Email</a>
+            </div>
+            <p>&copy; 2025 [YOUR NAME]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="[PLACEHOLDER: YOUR_SNIPCART_PUBLIC_API_KEY]"></div>
+
+    <!-- Image Protection Script -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+                return false;
+            }
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.querySelectorAll('img').forEach(function(img) {
+            img.setAttribute('draggable', 'false');
+        });
+    </script>
+
+</body>
+</html>
