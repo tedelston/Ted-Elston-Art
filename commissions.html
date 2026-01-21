@@ -158,10 +158,10 @@
 
         .process-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr; /* Forces exactly 2 columns */
             gap: 2rem;
-            margin-bottom: 3rem;
-            justify-content: center;
+            margin: 0 auto 3rem; /* 'auto' left/right margins center the block */
+            max-width: 700px; /* Restricts width so they stay close together */
         }
 
         .step {
@@ -467,6 +467,7 @@
 
 </body>
 </html>
+
 
 
 
