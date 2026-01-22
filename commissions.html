@@ -144,14 +144,16 @@
             line-height: 1.8;
         }
 
-        /* --- UPDATED: Process Section with Background Image --- */
+        /* --- UPDATED: Process Section Background Fix --- */
         .process-section {
             margin-bottom: 4rem;
             /* Added background image with dark overlay */
             background: linear-gradient(rgba(42, 42, 42, 0.6), rgba(42, 42, 42, 0.6)), url('commission.jpg');
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Optional: Creates a cool parallax effect */
+            /* Changed to 'scroll' (default) so it moves with the page */
+            background-attachment: scroll; 
+            /* Anchors image to the top center so heads aren't cut off */
+            background-position: center top; 
             padding: 5rem 2rem;
             border-radius: 4px;
         }
@@ -159,7 +161,6 @@
         .process-section h2 {
             font-size: 2rem;
             margin-bottom: 3rem;
-            /* Changed color to white for contrast */
             color: var(--soft-white);
             letter-spacing: 1px;
             text-align: center;
@@ -175,11 +176,11 @@
         }
 
         .step {
-            background-color: #eeede8; /* Keeps cards light so they pop against the image */
+            background-color: #eeede8; 
             padding: 2rem;
             border-radius: 4px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Added shadow for depth */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
         }
 
         .step-number {
