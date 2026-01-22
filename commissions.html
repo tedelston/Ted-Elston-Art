@@ -32,7 +32,11 @@
             overflow-y: auto !important; 
             -webkit-overflow-scrolling: touch;
         }
-        
+        /* 2. Z-INDEX FIX: Ensure cart sits ABOVE the nav bar */
+        /* The nav is 1000, so we make this much higher */
+        .snipcart-modal {
+            z-index: 9999 !important; 
+        }
         /* Image Protection */
         img {
             pointer-events: none;
@@ -537,5 +541,6 @@
 
 </body>
 </html>
+
 
 
