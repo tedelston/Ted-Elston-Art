@@ -3,20 +3,57 @@
     <head> 
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Gallery - Ted Elston Art</title>         
+        <title>Gallery - Ted Elston Art</title>          
         <link rel="icon" type="image/png" href="favicon.png"> 
+        
+        <link rel="preconnect" href="https://app.snipcart.com"> 
+        <link rel="preconnect" href="https://cdn.snipcart.com"> 
         <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css"/> 
+        
         <style>
+            /* --- RESET & VARIABLES --- */
             * { margin: 0; padding: 0; box-sizing: border-box; } 
             :root { --soft-black: #2a2a2a; --soft-white: #f8f7f4; --gold: #c9a961; --gold-dark: #a88a4d; } 
             body { font-family: 'Georgia', serif; background-color: var(--soft-white); color: var(--soft-black); line-height: 1.6; } 
-            .snipcart-layout {overflow-y: auto !important; -webkit-overflow-scrolling: touch;}  
-            /* 2. Z-INDEX FIX: Ensure cart sits ABOVE the nav bar */
-            /* The nav is 1000, so we make this much higher */
-            #snipcart {z-index: 999999 !important; position: relative; }
-            /* Image Protection */
-            img { pointer-events: none; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -webkit-touch-callout: none; } 
+
+            /* --- SNIPCART FIXES --- */
+            /* 1. Mobile Scrolling Fix */
+            .snipcart-layout {
+                overflow-y: auto !important; 
+                -webkit-overflow-scrolling: touch;
+            }
             
+            /* 2. Z-Index Fix (Cart sits above Nav) */
+            #snipcart {
+                z-index: 999999 !important; 
+                position: relative; 
+            }
+
+            /* --- TOAST NOTIFICATION --- */
+            .cart-notification {
+                position: fixed; 
+                bottom: 20px; 
+                right: 20px; 
+                background-color: var(--gold); 
+                color: var(--soft-black); 
+                padding: 1rem 2rem; 
+                border-radius: 4px; 
+                font-weight: bold; 
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+                transform: translateY(150px); /* Hidden by default */
+                opacity: 0; 
+                transition: all 0.3s ease-in-out; 
+                z-index: 9999999; 
+            }
+            .cart-notification.show {
+                transform: translateY(0); 
+                opacity: 1;
+            }
+
+            /* --- IMAGE PROTECTION --- */
+            img { pointer-events: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; } 
+            
+            /* --- NAVIGATION --- */
             nav img, button, a, .snipcart-checkout, select { pointer-events: auto; } 
             nav { background-color: var(--soft-black); padding: 1.5rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); } 
             nav .container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; } 
@@ -26,64 +63,46 @@
             nav a { color: var(--soft-white); text-decoration: none; transition: color 0.3s; font-size: 0.95rem; letter-spacing: 1px; } 
             nav a:hover, nav a.active { color: var(--gold); } 
             .cart-button { background-color: var(--gold); color: var(--soft-black); padding: 0.5rem 1.2rem; border-radius: 4px; font-weight: bold; } 
+            
+            /* --- LAYOUT --- */
             .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; } 
             .page-header { background-color: var(--soft-black); color: var(--soft-white); padding: 4rem 0; text-align: center; } 
             .page-header h1 { font-size: 3rem; letter-spacing: 2px; } 
+            
+            /* --- GALLERY GRID --- */
             .gallery-section { padding: 5rem 0; } 
             .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; align-items: start; } 
             .artwork-card { background-color: #eeede8; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; } 
             .artwork-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); } 
-            
-            /* Full image display fix */
             .artwork-image { width: 100%; height: auto; display: block; } 
-            
             .artwork-info { padding: 1.5rem; } 
             .artwork-title { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--soft-black); } 
             .artwork-details { color: #666; margin-bottom: 1rem; font-size: 0.95rem; } 
+            
+            /* --- DROPDOWNS & BUTTONS --- */
             .product-options { margin-bottom: 1rem; } 
             .product-options label { display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem; } 
             .product-options select { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.95rem; } 
             .buy-button { background-color: var(--gold); color: var(--soft-black); padding: 0.8rem 2rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; transition: all 0.3s; font-size: 1rem; letter-spacing: 1px; } 
             .buy-button:hover { background-color: var(--gold-dark); color: var(--soft-white); } 
+            
+            /* --- FOOTER --- */
             .copyright-notice { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #666; } 
-            footer { 
-                background-color: var(--soft-black); 
-                color: var(--soft-white); 
-                padding: 3rem 0 1.5rem; 
-                text-align: center; 
-            } 
-        
-            footer .social-links { 
-                display: flex; 
-                justify-content: center; 
-                gap: 2rem; /* Space between icons */
-                margin-bottom: 2rem; 
-            } 
-        
-            footer .social-links a { 
-                display: inline-block;
-                color: var(--gold); 
-                transition: transform 0.3s, color 0.3s; 
+            footer { background-color: var(--soft-black); color: var(--soft-white); padding: 3rem 0 1.5rem; text-align: center; } 
+            footer .social-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; } 
+            footer .social-links a { display: inline-block; color: var(--gold); transition: transform 0.3s, color 0.3s; }
+            footer .social-links a:hover { transform: translateY(-3px); color: var(--gold-dark); }
+            footer .social-links svg { width: 24px; height: 24px; fill: currentColor; }
+            footer p { font-size: 0.9rem; color: #999; }  
+            
+            /* --- RESPONSIVE --- */
+            @media (max-width: 768px) { 
+                nav ul { flex-wrap: wrap; gap: 1rem; justify-content: center; } 
+                nav .logo img { height: 50px; width: auto; display: block; } 
+                .gallery-grid { grid-template-columns: 1fr; } 
+                .page-header h1 { font-size: 2rem; } 
             }
-        
-            footer .social-links a:hover { 
-                transform: translateY(-3px); /* Subtle pop-up effect */
-                color: var(--gold-dark); 
-            }
-        
-            /* Size the icons */
-            footer .social-links svg {
-                width: 24px;
-                height: 24px;
-                fill: currentColor; /* Uses the text color defined in 'a' */
-            }
-
-            footer p { 
-                font-size: 0.9rem; 
-                color: #999; 
-            }  
-            @media (max-width: 768px) { nav ul {  flex-wrap: wrap;  gap: 1rem;  justify-content: center; }  nav .logo img {  height: 50px;  width: auto;  display: block; }  .gallery-grid {  grid-template-columns: 1fr; }  .page-header h1 {  font-size: 2rem; } }
-        </style>         
+        </style>          
     </head>      
     <body> 
         <nav> 
@@ -99,11 +118,13 @@
                 </ul>                  
             </div>              
         </nav>          
+        
         <div class="page-header"> 
             <div class="container"> 
                 <h1>Gallery</h1> 
             </div>              
         </div>          
+        
         <section class="gallery-section"> 
             <div class="container"> 
                 <div class="gallery-grid"> 
@@ -123,7 +144,7 @@
                             <button class="buy-button snipcart-add-item"
                                 data-item-id="csm-01"
                                 data-item-price="35.00"
-                                data-item-url="https://tedelston.com/gallery.html"
+                                data-item-url="/gallery.html"
                                 data-item-image="csm.jpg"
                                 data-item-name="College Street Meows"
                                 data-item-description="Oil on Canvas"
@@ -786,18 +807,22 @@
                 </div>                  
             </div>              
         </section>          
+        
         <div class="copyright-notice"> 
             <div class="container"> 
                 <p>© All images are copyrighted and may not be reproduced without written permission from Ted Elston.</p> 
             </div>              
-        </div>          
+        </div>  
+        
+        <div id="cart-notification" class="cart-notification">Item added to cart!</div>
+        
         <footer> 
             <div class="container"> 
                 <div class="social-links"> 
                     <a href="https://www.facebook.com/tedelstonartist" target="_blank" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
-                
+                    
                     <a href="https://www.instagram.com/tedelston/" target="_blank" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
@@ -813,57 +838,58 @@
                     <a href="mailto:info@tedelston.com" aria-label="Email">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
-                </div>                  
+                </div>                    
                 <p>&copy; 2025 Ted Elston Art. All rights reserved.</p> 
             </div>              
-        </footer>         
+        </footer>          
+        
         <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>          
-        <div hidden id="snipcart" data-api-key="NjI1MGU1ODItN2MwYy00ZmM3LTgzNmQtZDQ4ZDEzMWI5OWU5NjM5MDQ2MDgyNzk2MjExMDg4" data-config-add-product-behavior="none"></div>          
+        
+        <div hidden id="snipcart" 
+             data-api-key="NjI1MGU1ODItN2MwYy00ZmM3LTgzNmQtZDQ4ZDEzMWI5OWU5NjM5MDQ2MDgyNzk2MjExMDg4" 
+             data-config-add-product-behavior="none">
+        </div>          
+        
         <script>
+        // --- IMAGE PROTECTION ---
         document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                return false;
-            }
+            if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
         });
-
         document.addEventListener('dragstart', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-                return false;
-            }
+            if (e.target.tagName === 'IMG') { e.preventDefault(); return false; }
         });
-
         document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                e.preventDefault();
-                return false;
-            }
-            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                e.preventDefault();
-                return false;
+            if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+                e.preventDefault(); return false;
             }
         });
-
         document.querySelectorAll('img').forEach(function(img) {
             img.setAttribute('draggable', 'false');
         });
         
-        // --- ADDED: Fix for the dropdown logic ---
+        // --- DROPDOWN LOGIC ---
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.artwork-card');
             cards.forEach(card => {
                 const select = card.querySelector('select');
                 const button = card.querySelector('.buy-button');
+                
                 if (select && button) {
                     select.addEventListener('change', function() {
                         const optionsString = button.getAttribute('data-item-custom1-options');
                         if (optionsString) {
+                            // Split by pipe to get options: ["Small Print...", "Large Print..."]
                             const optionsArray = optionsString.split('|');
                             const selectedIndex = select.selectedIndex;
+                            
                             if (optionsArray[selectedIndex]) {
+                                // Get the raw option string: "Large Print (24x18)[+165]"
                                 const selectedOptionString = optionsArray[selectedIndex];
+                                
+                                // Strip price modifier: "Large Print (24x18)"
                                 const cleanName = selectedOptionString.split('[')[0];
+                                
+                                // Update button
                                 button.setAttribute('data-item-custom1-value', cleanName);
                             }
                         }
@@ -871,6 +897,17 @@
                 }
             });
         });
-    </script>          
+
+        // --- TOAST NOTIFICATION LOGIC ---
+        document.addEventListener('snipcart.ready', function() {
+            Snipcart.events.on('item.added', function (cartItem) {
+                var notification = document.getElementById('cart-notification');
+                notification.classList.add('show');
+                setTimeout(function() {
+                    notification.classList.remove('show');
+                }, 3000);
+            });
+        });
+        </script>          
     </body>      
 </html>
