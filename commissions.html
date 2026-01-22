@@ -34,9 +34,11 @@
         }
         /* 2. Z-INDEX FIX: Ensure cart sits ABOVE the nav bar */
         /* The nav is 1000, so we make this much higher */
-        .snipcart-modal {
-            z-index: 9999 !important; 
+        #snipcart {
+            z-index: 999999 !important; 
+            position: relative; 
         }
+        
         /* Image Protection */
         img {
             pointer-events: none;
@@ -541,6 +543,7 @@
 
 </body>
 </html>
+
 
 
 
