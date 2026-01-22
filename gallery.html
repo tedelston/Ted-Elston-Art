@@ -17,13 +17,10 @@
             body { font-family: 'Georgia', serif; background-color: var(--soft-white); color: var(--soft-black); line-height: 1.6; } 
 
             /* --- SNIPCART FIXES --- */
-            /* 1. Mobile Scrolling Fix */
             .snipcart-layout {
                 overflow-y: auto !important; 
                 -webkit-overflow-scrolling: touch;
             }
-            
-            /* 2. Z-Index Fix (Cart sits above Nav) */
             #snipcart {
                 z-index: 999999 !important; 
                 position: relative; 
@@ -40,7 +37,7 @@
                 border-radius: 4px; 
                 font-weight: bold; 
                 box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-                transform: translateY(150px); /* Hidden by default */
+                transform: translateY(150px); 
                 opacity: 0; 
                 transition: all 0.3s ease-in-out; 
                 z-index: 9999999; 
@@ -136,9 +133,9 @@
                             <p class="artwork-details">Oil on Canvas | 32"x24" Original</p>
                             <div class="product-options">
                                 <select id="type-1">
-                                    <option value="small">Small Print (10"x7.5") - £35</option>
-                                    <option value="large">Large Print (24"x18") - £200</option>
-                                    <option value="orig" disabled>Original (32"x24") - SOLD</option>
+                                    <option value="small">Small Print (10x7.5 inches) - £35</option>
+                                    <option value="large">Large Print (24x18 inches) - £200</option>
+                                    <option value="orig" disabled>Original (32x24 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -149,8 +146,8 @@
                                 data-item-name="College Street Meows"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x7.5)[+0]|Large Print (24x18)[+165]"
-                                data-item-custom1-value="Small Print (10x7.5)">
+                                data-item-custom1-options="Small Print (10x7.5 inches)[+0]|Large Print (24x18 inches)[+165]"
+                                data-item-custom1-value="Small Print (10x7.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -163,9 +160,9 @@
                             <p class="artwork-details">Oil on Canvas | 24"x18" Original</p>
                             <div class="product-options">
                                 <select id="type-2">
-                                    <option value="small">Small Print (10"x7.5") - £35</option>
-                                    <option value="large">Large Print (24"x18") - £200</option>
-                                    <option value="orig">Original (24"x18") - £650</option>
+                                    <option value="small">Small Print (10x7.5 inches) - £35</option>
+                                    <option value="large">Large Print (24x18 inches) - £200</option>
+                                    <option value="orig">Original (24x18 inches) - £650</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -176,8 +173,8 @@
                                 data-item-name="Amcomri St"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x7.5)[+0]|Large Print (24x18)[+165]|Original (24x18)[+615]"
-                                data-item-custom1-value="Small Print (10x7.5)">
+                                data-item-custom1-options="Small Print (10x7.5 inches)[+0]|Large Print (24x18 inches)[+165]|Original (24x18 inches)[+615]"
+                                data-item-custom1-value="Small Print (10x7.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -190,9 +187,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-3">
-                                    <option value="small">Small Print (8"x8") - £40</option>
-                                    <option value="large">Large Print (16"x16") - £160</option>
-                                    <option value="orig" disabled>Original (16"x16") - SOLD</option>
+                                    <option value="small">Small Print (8x8 inches) - £40</option>
+                                    <option value="large">Large Print (16x16 inches) - £160</option>
+                                    <option value="orig" disabled>Original (16x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -203,8 +200,8 @@
                                 data-item-name="This is Your Brain on Rugs"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x8)[+0]|Large Print (16x16)[+120]"
-                                data-item-custom1-value="Small Print (8x8)">
+                                data-item-custom1-options="Small Print (8x8 inches)[+0]|Large Print (16x16 inches)[+120]"
+                                data-item-custom1-value="Small Print (8x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -217,9 +214,9 @@
                             <p class="artwork-details">Oil on Canvas | 12"x32" Original</p>
                             <div class="product-options">
                                 <select id="type-4">
-                                    <option value="small">Small Print (5.25"x14") - £35</option>
-                                    <option value="large">Large Print (12"x32") - £180</option>
-                                    <option value="orig" disabled>Original (12"x32") - SOLD</option>
+                                    <option value="small">Small Print (5.25x14 inches) - £35</option>
+                                    <option value="large">Large Print (12x32 inches) - £180</option>
+                                    <option value="orig" disabled>Original (12x32 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -230,8 +227,8 @@
                                 data-item-name="Those with loaded Guns"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (5.25x14)[+0]|Large Print (12x32)[+145]"
-                                data-item-custom1-value="Small Print (5.25x14)">
+                                data-item-custom1-options="Small Print (5.25x14 inches)[+0]|Large Print (12x32 inches)[+145]"
+                                data-item-custom1-value="Small Print (5.25x14 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -244,9 +241,9 @@
                             <p class="artwork-details">Oil on Canvas | 24"x30" Original</p>
                             <div class="product-options">
                                 <select id="type-5">
-                                    <option value="small">Small Print (8"x10") - £35</option>
-                                    <option value="large">Large Print (20"x25") - £220</option>
-                                    <option value="orig" disabled>Original (24"x30") - SOLD</option>
+                                    <option value="small">Small Print (8x10 inches) - £35</option>
+                                    <option value="large">Large Print (20x25 inches) - £220</option>
+                                    <option value="orig" disabled>Original (24x30 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -257,8 +254,8 @@
                                 data-item-name="Hearth of the Countryside"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x10)[+0]|Large Print (20x25)[+185]"
-                                data-item-custom1-value="Small Print (8x10)">
+                                data-item-custom1-options="Small Print (8x10 inches)[+0]|Large Print (20x25 inches)[+185]"
+                                data-item-custom1-value="Small Print (8x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -271,9 +268,9 @@
                             <p class="artwork-details">Oil on Canvas | 32"x24" Original</p>
                             <div class="product-options">
                                 <select id="type-6">
-                                    <option value="small">Small Print (10"x7.5") - £35</option>
-                                    <option value="large">Large Print (24"x18") - £200</option>
-                                    <option value="orig" disabled>Original (32"x24") - SOLD</option>
+                                    <option value="small">Small Print (10x7.5 inches) - £35</option>
+                                    <option value="large">Large Print (24x18 inches) - £200</option>
+                                    <option value="orig" disabled>Original (32x24 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -284,8 +281,8 @@
                                 data-item-name="Nature finds a Way"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x7.5)[+0]|Large Print (24x18)[+165]"
-                                data-item-custom1-value="Small Print (10x7.5)">
+                                data-item-custom1-options="Small Print (10x7.5 inches)[+0]|Large Print (24x18 inches)[+165]"
+                                data-item-custom1-value="Small Print (10x7.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -298,9 +295,9 @@
                             <p class="artwork-details">Oil on Canvas | 20"x24" Original</p>
                             <div class="product-options">
                                 <select id="type-7">
-                                    <option value="small">Small Print (8"x9.6") - £35</option>
-                                    <option value="large">Large Print (20"x24") - £220</option>
-                                    <option value="orig" disabled>Original (20"x24") - SOLD</option>
+                                    <option value="small">Small Print (8x9.6 inches) - £35</option>
+                                    <option value="large">Large Print (20x24 inches) - £220</option>
+                                    <option value="orig" disabled>Original (20x24 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -311,8 +308,8 @@
                                 data-item-name="Sunset"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x9.6)[+0]|Large Print (20x24)[+185]"
-                                data-item-custom1-value="Small Print (8x9.6)">
+                                data-item-custom1-options="Small Print (8x9.6 inches)[+0]|Large Print (20x24 inches)[+185]"
+                                data-item-custom1-value="Small Print (8x9.6 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -325,9 +322,9 @@
                             <p class="artwork-details">Oil on Canvas | 20"x30" Original</p>
                             <div class="product-options">
                                 <select id="type-8">
-                                    <option value="small">Small Print (7"x10.5") - £35</option>
-                                    <option value="large">Large Print (16"x24") - £180</option>
-                                    <option value="orig">Original (20"x30") - £795</option>
+                                    <option value="small">Small Print (7x10.5 inches) - £35</option>
+                                    <option value="large">Large Print (16x24 inches) - £180</option>
+                                    <option value="orig">Original (20x30 inches) - £795</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -338,8 +335,8 @@
                                 data-item-name="The Fast Lane"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7x10.5)[+0]|Large Print (16x24)[+145]|Original (20x30)[+760]"
-                                data-item-custom1-value="Small Print (7x10.5)">
+                                data-item-custom1-options="Small Print (7x10.5 inches)[+0]|Large Print (16x24 inches)[+145]|Original (20x30 inches)[+760]"
+                                data-item-custom1-value="Small Print (7x10.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -352,9 +349,9 @@
                             <p class="artwork-details">Oil on Canvas | 18"x24" Original</p>
                             <div class="product-options">
                                 <select id="type-9">
-                                    <option value="small">Small Print (7.5"x10") - £35</option>
-                                    <option value="large">Large Print (18"x24") - £200</option>
-                                    <option value="orig" disabled>Original (18"x24") - SOLD</option>
+                                    <option value="small">Small Print (7.5x10 inches) - £35</option>
+                                    <option value="large">Large Print (18x24 inches) - £200</option>
+                                    <option value="orig" disabled>Original (18x24 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -365,8 +362,8 @@
                                 data-item-name="The Child"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7.5x10)[+0]|Large Print (18x24)[+165]"
-                                data-item-custom1-value="Small Print (7.5x10)">
+                                data-item-custom1-options="Small Print (7.5x10 inches)[+0]|Large Print (18x24 inches)[+165]"
+                                data-item-custom1-value="Small Print (7.5x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -379,9 +376,9 @@
                             <p class="artwork-details">Oil on Paper | 12"x8" Original</p>
                             <div class="product-options">
                                 <select id="type-10">
-                                    <option value="small">Small Print (12"x8") - £50</option>
-                                    <option value="large">Large Print (16"x12") - £100</option>
-                                    <option value="orig" disabled>Original (12"x8") - SOLD</option>
+                                    <option value="small">Small Print (12x8 inches) - £50</option>
+                                    <option value="large">Large Print (16x12 inches) - £100</option>
+                                    <option value="orig" disabled>Original (12x8 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -392,8 +389,8 @@
                                 data-item-name="Laurence"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (12x8)[+0]|Large Print (16x12)[+50]"
-                                data-item-custom1-value="Small Print (12x8)">
+                                data-item-custom1-options="Small Print (12x8 inches)[+0]|Large Print (16x12 inches)[+50]"
+                                data-item-custom1-value="Small Print (12x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -406,9 +403,9 @@
                             <p class="artwork-details">Oil on Paper | 12"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-11">
-                                    <option value="small">Small Print (7.5"x10") - £40</option>
-                                    <option value="large">Large Print (12"x16") - £100</option>
-                                    <option value="orig" disabled>Original (12"x16") - SOLD</option>
+                                    <option value="small">Small Print (7.5x10 inches) - £40</option>
+                                    <option value="large">Large Print (12x16 inches) - £100</option>
+                                    <option value="orig" disabled>Original (12x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -419,8 +416,8 @@
                                 data-item-name="Rory"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7.5x10)[+0]|Large Print (12x16)[+60]"
-                                data-item-custom1-value="Small Print (7.5x10)">
+                                data-item-custom1-options="Small Print (7.5x10 inches)[+0]|Large Print (12x16 inches)[+60]"
+                                data-item-custom1-value="Small Print (7.5x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -433,9 +430,9 @@
                             <p class="artwork-details">Oil on Paper | 16"x12" Original</p>
                             <div class="product-options">
                                 <select id="type-12">
-                                    <option value="small">Small Print (10"x7.5") - £40</option>
-                                    <option value="large">Large Print (16"x12") - £100</option>
-                                    <option value="orig" disabled>Original (16"x12") - SOLD</option>
+                                    <option value="small">Small Print (10x7.5 inches) - £40</option>
+                                    <option value="large">Large Print (16x12 inches) - £100</option>
+                                    <option value="orig" disabled>Original (16x12 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -446,8 +443,8 @@
                                 data-item-name="Jimi"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x7.5)[+0]|Large Print (16x12)[+60]"
-                                data-item-custom1-value="Small Print (10x7.5)">
+                                data-item-custom1-options="Small Print (10x7.5 inches)[+0]|Large Print (16x12 inches)[+60]"
+                                data-item-custom1-value="Small Print (10x7.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -460,9 +457,9 @@
                             <p class="artwork-details">Oil on Paper | 12"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-13">
-                                    <option value="small">Small Print (7.5"x10") - £40</option>
-                                    <option value="large">Large Print (12"x16") - £100</option>
-                                    <option value="orig" disabled>Original (12"x16") - SOLD</option>
+                                    <option value="small">Small Print (7.5x10 inches) - £40</option>
+                                    <option value="large">Large Print (12x16 inches) - £100</option>
+                                    <option value="orig" disabled>Original (12x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -473,8 +470,8 @@
                                 data-item-name="JRET"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7.5x10)[+0]|Large Print (12x16)[+60]"
-                                data-item-custom1-value="Small Print (7.5x10)">
+                                data-item-custom1-options="Small Print (7.5x10 inches)[+0]|Large Print (12x16 inches)[+60]"
+                                data-item-custom1-value="Small Print (7.5x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -487,9 +484,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-14">
-                                    <option value="small">Small Print (8"x8") - £40</option>
-                                    <option value="large">Large Print (16"x16") - £160</option>
-                                    <option value="orig" disabled>Original (16"x16") - SOLD</option>
+                                    <option value="small">Small Print (8x8 inches) - £40</option>
+                                    <option value="large">Large Print (16x16 inches) - £160</option>
+                                    <option value="orig" disabled>Original (16x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -500,8 +497,8 @@
                                 data-item-name="After a long hard day"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x8)[+0]|Large Print (16x16)[+120]"
-                                data-item-custom1-value="Small Print (8x8)">
+                                data-item-custom1-options="Small Print (8x8 inches)[+0]|Large Print (16x16 inches)[+120]"
+                                data-item-custom1-value="Small Print (8x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -514,9 +511,9 @@
                             <p class="artwork-details">Oil on Canvas | 20"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-15">
-                                    <option value="small">Small Print (10"x8") - £40</option>
-                                    <option value="large">Large Print (20"x16") - £160</option>
-                                    <option value="orig">Original (20"x16") - £500</option>
+                                    <option value="small">Small Print (10x8 inches) - £40</option>
+                                    <option value="large">Large Print (20x16 inches) - £160</option>
+                                    <option value="orig">Original (20x16 inches) - £500</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -527,8 +524,8 @@
                                 data-item-name="Friendly Neighbourhood"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x8)[+0]|Large Print (20x16)[+120]|Original (20x16)[+460]"
-                                data-item-custom1-value="Small Print (10x8)">
+                                data-item-custom1-options="Small Print (10x8 inches)[+0]|Large Print (20x16 inches)[+120]|Original (20x16 inches)[+460]"
+                                data-item-custom1-value="Small Print (10x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -541,9 +538,9 @@
                             <p class="artwork-details">Oil on Canvas | 20"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-16">
-                                    <option value="small">Small Print (10"x8") - £40</option>
-                                    <option value="large">Large Print (20"x16") - £160</option>
-                                    <option value="orig">Original (20"x16") - £500</option>
+                                    <option value="small">Small Print (10x8 inches) - £40</option>
+                                    <option value="large">Large Print (20x16 inches) - £160</option>
+                                    <option value="orig">Original (20x16 inches) - £500</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -554,8 +551,8 @@
                                 data-item-name="A Dark Night"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x8)[+0]|Large Print (20x16)[+120]|Original (20x16)[+460]"
-                                data-item-custom1-value="Small Print (10x8)">
+                                data-item-custom1-options="Small Print (10x8 inches)[+0]|Large Print (20x16 inches)[+120]|Original (20x16 inches)[+460]"
+                                data-item-custom1-value="Small Print (10x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -568,9 +565,9 @@
                             <p class="artwork-details">Oil on Canvas | 18"x24" Original</p>
                             <div class="product-options">
                                 <select id="type-17">
-                                    <option value="small">Small Print (7.5"x10") - £35</option>
-                                    <option value="large">Large Print (24"x18") - £200</option>
-                                    <option value="orig" disabled>Original (18"x24") - SOLD</option>
+                                    <option value="small">Small Print (7.5x10 inches) - £35</option>
+                                    <option value="large">Large Print (24x18 inches) - £200</option>
+                                    <option value="orig" disabled>Original (18x24 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -581,8 +578,8 @@
                                 data-item-name="Be like Water"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7.5x10)[+0]|Large Print (24x18)[+165]"
-                                data-item-custom1-value="Small Print (7.5x10)">
+                                data-item-custom1-options="Small Print (7.5x10 inches)[+0]|Large Print (24x18 inches)[+165]"
+                                data-item-custom1-value="Small Print (7.5x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -595,9 +592,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-18">
-                                    <option value="small">Small Print (8"x8") - £40</option>
-                                    <option value="large">Large Print (16"x16") - £160</option>
-                                    <option value="orig" disabled>Original (16"x16") - SOLD</option>
+                                    <option value="small">Small Print (8x8 inches) - £40</option>
+                                    <option value="large">Large Print (16x16 inches) - £160</option>
+                                    <option value="orig" disabled>Original (16x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -608,8 +605,8 @@
                                 data-item-name="JT28"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x8)[+0]|Large Print (16x16)[+120]"
-                                data-item-custom1-value="Small Print (8x8)">
+                                data-item-custom1-options="Small Print (8x8 inches)[+0]|Large Print (16x16 inches)[+120]"
+                                data-item-custom1-value="Small Print (8x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -622,9 +619,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x12" Original</p>
                             <div class="product-options">
                                 <select id="type-19">
-                                    <option value="small">Small Print (10"x7.5") - £40</option>
-                                    <option value="large">Large Print (16"x12") - £100</option>
-                                    <option value="orig">Original (16"x12") - £425</option>
+                                    <option value="small">Small Print (10x7.5 inches) - £40</option>
+                                    <option value="large">Large Print (16x12 inches) - £100</option>
+                                    <option value="orig">Original (16x12 inches) - £425</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -635,8 +632,8 @@
                                 data-item-name="Dad's Project"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (10x7.5)[+0]|Large Print (16x12)[+60]|Original (16x12)[+385]"
-                                data-item-custom1-value="Small Print (10x7.5)">
+                                data-item-custom1-options="Small Print (10x7.5 inches)[+0]|Large Print (16x12 inches)[+60]|Original (16x12 inches)[+385]"
+                                data-item-custom1-value="Small Print (10x7.5 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -649,9 +646,9 @@
                             <p class="artwork-details">Oil on Paper | 8"x12" Original</p>
                             <div class="product-options">
                                 <select id="type-20">
-                                    <option value="small">Small Print (8"x12") - £50</option>
-                                    <option value="large">Large Print (12"x16") - £100</option>
-                                    <option value="orig" disabled>Original (8"x12") - SOLD</option>
+                                    <option value="small">Small Print (8x12 inches) - £50</option>
+                                    <option value="large">Large Print (12x16 inches) - £100</option>
+                                    <option value="orig" disabled>Original (8x12 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -662,8 +659,8 @@
                                 data-item-name="Bulitt"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x12)[+0]|Large Print (12x16)[+50]"
-                                data-item-custom1-value="Small Print (8x12)">
+                                data-item-custom1-options="Small Print (8x12 inches)[+0]|Large Print (12x16 inches)[+50]"
+                                data-item-custom1-value="Small Print (8x12 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -676,9 +673,9 @@
                             <p class="artwork-details">Oil on Paper | 12"x8" Original</p>
                             <div class="product-options">
                                 <select id="type-21">
-                                    <option value="small">Small Print (12"x8") - £50</option>
-                                    <option value="large">Large Print (16"x12") - £100</option>
-                                    <option value="orig" disabled>Original (12"x8") - SOLD</option>
+                                    <option value="small">Small Print (12x8 inches) - £50</option>
+                                    <option value="large">Large Print (16x12 inches) - £100</option>
+                                    <option value="orig" disabled>Original (12x8 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -689,8 +686,8 @@
                                 data-item-name="Bel Air Sunset"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (12x8)[+0]|Large Print (16x12)[+50]"
-                                data-item-custom1-value="Small Print (12x8)">
+                                data-item-custom1-options="Small Print (12x8 inches)[+0]|Large Print (16x12 inches)[+50]"
+                                data-item-custom1-value="Small Print (12x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -703,9 +700,9 @@
                             <p class="artwork-details">Oil on Paper | 8"x6" Original</p>
                             <div class="product-options">
                                 <select id="type-22">
-                                    <option value="small">Small Print (8"x6") - £30</option>
-                                    <option value="large">Large Print (12"x8") - £60</option>
-                                    <option value="orig" disabled>Original (8"x6") - SOLD</option>
+                                    <option value="small">Small Print (8x6 inches) - £30</option>
+                                    <option value="large">Large Print (12x8 inches) - £60</option>
+                                    <option value="orig" disabled>Original (8x6 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -716,8 +713,8 @@
                                 data-item-name="Shaken not Stirred"
                                 data-item-description="Oil on Paper"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x6)[+0]|Large Print (12x8)[+30]"
-                                data-item-custom1-value="Small Print (8x6)">
+                                data-item-custom1-options="Small Print (8x6 inches)[+0]|Large Print (12x8 inches)[+30]"
+                                data-item-custom1-value="Small Print (8x6 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -730,9 +727,9 @@
                             <p class="artwork-details">Oil on Canvas | 12"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-23">
-                                    <option value="small">Small Print (7.5"x10") - £40</option>
-                                    <option value="large">Large Print (12"x16") - £100</option>
-                                    <option value="orig" disabled>Original (12"x16") - SOLD</option>
+                                    <option value="small">Small Print (7.5x10 inches) - £40</option>
+                                    <option value="large">Large Print (12x16 inches) - £100</option>
+                                    <option value="orig" disabled>Original (12x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -743,8 +740,8 @@
                                 data-item-name="Mad Flavours"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (7.5x10)[+0]|Large Print (12x16)[+60]"
-                                data-item-custom1-value="Small Print (7.5x10)">
+                                data-item-custom1-options="Small Print (7.5x10 inches)[+0]|Large Print (12x16 inches)[+60]"
+                                data-item-custom1-value="Small Print (7.5x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -757,9 +754,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x16" Original</p>
                             <div class="product-options">
                                 <select id="type-24">
-                                    <option value="small">Small Print (8"x8") - £40</option>
-                                    <option value="large">Large Print (16"x16") - £160</option>
-                                    <option value="orig" disabled>Original (16"x16") - SOLD</option>
+                                    <option value="small">Small Print (8x8 inches) - £40</option>
+                                    <option value="large">Large Print (16x16 inches) - £160</option>
+                                    <option value="orig" disabled>Original (16x16 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -770,8 +767,8 @@
                                 data-item-name="Psychonaut"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x8)[+0]|Large Print (16x16)[+120]"
-                                data-item-custom1-value="Small Print (8x8)">
+                                data-item-custom1-options="Small Print (8x8 inches)[+0]|Large Print (16x16 inches)[+120]"
+                                data-item-custom1-value="Small Print (8x8 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -784,9 +781,9 @@
                             <p class="artwork-details">Oil on Canvas | 16"x20" Original</p>
                             <div class="product-options">
                                 <select id="type-25">
-                                    <option value="small">Small Print (8"x10") - £40</option>
-                                    <option value="large">Large Print (16"x20") - £160</option>
-                                    <option value="orig" disabled>Original (16"x20") - SOLD</option>
+                                    <option value="small">Small Print (8x10 inches) - £40</option>
+                                    <option value="large">Large Print (16x20 inches) - £160</option>
+                                    <option value="orig" disabled>Original (16x20 inches) - SOLD</option>
                                 </select>
                             </div>
                             <button class="buy-button snipcart-add-item"
@@ -797,8 +794,8 @@
                                 data-item-name="Breakthrough"
                                 data-item-description="Oil on Canvas"
                                 data-item-custom1-name="Size"
-                                data-item-custom1-options="Small Print (8x10)[+0]|Large Print (16x20)[+120]"
-                                data-item-custom1-value="Small Print (8x10)">
+                                data-item-custom1-options="Small Print (8x10 inches)[+0]|Large Print (16x20 inches)[+120]"
+                                data-item-custom1-value="Small Print (8x10 inches)">
                                 Add to Cart
                             </button>
                         </div>
@@ -825,10 +822,6 @@
                     
                     <a href="https://www.instagram.com/tedelston/" target="_blank" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-
-                    <a href="https://www.tiktok.com/@tedelston" target="_blank" aria-label="TikTok">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                     </a>
 
                     <a href="mailto:info@tedelston.com" aria-label="Email">
@@ -874,12 +867,18 @@
                     select.addEventListener('change', function() {
                         const optionsString = button.getAttribute('data-item-custom1-options');
                         if (optionsString) {
+                            // Split by pipe to get options: ["Small Print...", "Large Print..."]
                             const optionsArray = optionsString.split('|');
                             const selectedIndex = select.selectedIndex;
                             
                             if (optionsArray[selectedIndex]) {
+                                // Get the raw option string: "Large Print (24x18 inches)[+165]"
                                 const selectedOptionString = optionsArray[selectedIndex];
+                                
+                                // Strip price modifier: "Large Print (24x18 inches)"
                                 const cleanName = selectedOptionString.split('[')[0];
+                                
+                                // Update button
                                 button.setAttribute('data-item-custom1-value', cleanName);
                             }
                         }
