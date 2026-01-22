@@ -144,16 +144,14 @@
             line-height: 1.8;
         }
 
-        /* --- UPDATED: Process Section Background Fix --- */
+        /* --- UPDATED: Process Section Background --- */
         .process-section {
             margin-bottom: 4rem;
-            /* Added background image with dark overlay */
-            background: linear-gradient(rgba(42, 42, 42, 0.6), rgba(42, 42, 42, 0.6)), url('commission.jpg');
+            /* Dark overlay + Image */
+            background: linear-gradient(rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url('commission.jpg');
             background-size: cover;
-            /* Changed to 'scroll' (default) so it moves with the page */
             background-attachment: scroll; 
-            /* Anchors image to the top center so heads aren't cut off */
-            background-position: center top; 
+            background-position: center center; /* Centers image to reduce awkward cropping */
             padding: 5rem 2rem;
             border-radius: 4px;
         }
@@ -175,8 +173,13 @@
             max-width: 700px; 
         }
 
+        /* --- UPDATED: Transparent Boxes --- */
         .step {
-            background-color: #eeede8; 
+            /* RGBA color: The 0.85 at the end makes it 85% opaque */
+            background-color: rgba(238, 237, 232, 0.85); 
+            /* Blur effect for "Frosted Glass" look */
+            backdrop-filter: blur(5px); 
+            -webkit-backdrop-filter: blur(5px); /* Safari support */
             padding: 2rem;
             border-radius: 4px;
             text-align: center;
@@ -204,7 +207,7 @@
 
         .step p {
             font-size: 0.95rem;
-            color: #666;
+            color: #2a2a2a; /* Dark text for readability */
         }
 
         .commission-form {
