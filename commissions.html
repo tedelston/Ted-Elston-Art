@@ -129,7 +129,7 @@
         }
 
         .commission-content {
-            max-width: 900px;
+            max-width: 1200px; /* Increased width to accommodate split layout */
             margin: 0 auto;
         }
 
@@ -138,81 +138,92 @@
             margin-bottom: 1rem;
         }
 
-        .commission-intro p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        /* Process Section Background */
+        /* --- UPDATED: Split Layout for Process Section --- */
         .process-section {
             margin-bottom: 4rem;
-            /* Dark overlay + Image */
-            background: linear-gradient(rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url('commission.jpg');
-            background-size: cover;
-            background-attachment: scroll; 
-            background-position: center center;
-            padding: 5rem 2rem;
             border-radius: 4px;
+            overflow: hidden; /* Ensures image corners don't stick out */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .process-section h2 {
+        .process-container-split {
+            display: flex;
+            align-items: stretch; /* Makes both sides equal height */
+        }
+
+        /* Left Side: Image */
+        .process-image-side {
+            flex: 1;
+            background-image: url('commission.jpg');
+            background-size: cover;
+            background-position: center center;
+            min-height: 400px; 
+        }
+
+        /* Right Side: Content */
+        .process-content-side {
+            flex: 1;
+            background-color: var(--soft-black); /* Dark background to contrast cards */
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .process-content-side h2 {
             font-size: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             color: var(--soft-white);
             letter-spacing: 1px;
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .process-steps {
             display: grid;
             grid-template-columns: 1fr 1fr; 
-            gap: 2rem;
-            margin: 0 auto 3rem; 
-            max-width: 700px; 
+            gap: 1.5rem;
         }
 
-        /* --- UPDATED: More Transparent Boxes --- */
+        /* --- UPDATED: Solid Boxes (No Transparency) --- */
         .step {
-            /* Changed opacity from 0.85 to 0.70 for more transparency */
-            background-color: rgba(238, 237, 232, 0.70); 
-            backdrop-filter: blur(5px); 
-            -webkit-backdrop-filter: blur(5px);
-            padding: 2rem;
+            background-color: #eeede8; /* Solid light color */
+            padding: 1.5rem;
             border-radius: 4px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
         }
 
         .step-number {
             background-color: var(--gold);
             color: var(--soft-black);
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             margin: 0 auto 1rem;
         }
 
         .step h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            color: var(--soft-black);
         }
 
         .step p {
-            font-size: 0.95rem;
-            color: #2a2a2a; 
+            font-size: 0.9rem;
+            color: #444; 
         }
 
         .commission-form {
             background-color: #eeede8;
             padding: 3rem;
             border-radius: 4px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .commission-form h2 {
@@ -305,7 +316,7 @@
             color: #999; 
         } 
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             nav ul {
                 flex-wrap: wrap;
                 gap: 1rem;
@@ -320,12 +331,22 @@
                 font-size: 2rem;
             }
 
-            .commission-form {
+            /* Stack image and content on smaller screens */
+            .process-container-split {
+                flex-direction: column;
+            }
+            .process-image-side {
+                min-height: 300px;
+            }
+            .process-content-side {
                 padding: 2rem;
             }
-
             .process-steps {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* Stack cards on mobile */
+            }
+
+            .commission-form {
+                padding: 2rem;
             }
         }
     </style>
@@ -355,33 +376,36 @@
         <div class="container">
             <div class="commission-content">
                 
-                <div class="commission-intro">
-                    </div>
+                <div class="commission-intro"></div>
 
                 <div class="process-section">
-                    <h2>Commission Process</h2>
-                    <div class="process-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h3>Initial Consultation</h3>
-                            <p>Commissions begin with a short discussion of subject matter and references.<br>
-                            Artworks can be ink/water colour or oil paintings.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h3>Proposal & Quote</h3>
-                            <p> I will provide you with a timeline and pricing based on your needs.<br>
-                            From there, I will plan out composition, scale, and painterly approach.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h3>Creation</h3>
-                            <p>I begin work on your piece, providing updates throughout the process.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <h3>Delivery</h3>
-                            <p>Your finished painting is carefully packaged and delivered to you.</p>
+                    <div class="process-container-split">
+                        <div class="process-image-side"></div>
+                        
+                        <div class="process-content-side">
+                            <h2>Commission Process</h2>
+                            <div class="process-steps">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <h3>Initial Consultation</h3>
+                                    <p>Discussion of subject matter and references. Ink/water colour or oil paintings available.</p>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <h3>Proposal & Quote</h3>
+                                    <p>I will provide a timeline and price, then plan composition and scale.</p>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <h3>Creation</h3>
+                                    <p>I begin work on your piece, providing regular updates throughout the process.</p>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <h3>Delivery</h3>
+                                    <p>Your finished painting is carefully packaged and delivered safely to you.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
