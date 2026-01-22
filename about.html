@@ -40,11 +40,43 @@
             .statement-section h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: var(--soft-black); letter-spacing: 1px; } 
             .statement-section p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; } 
             .copyright-notice { text-align: center; padding: 2rem 0; font-size: 0.9rem; color: #666; } 
-            footer { background-color: var(--soft-black); color: var(--soft-white); padding: 3rem 0 1.5rem; text-align: center; } 
-            .social-links { margin-bottom: 2rem; } 
-            .social-links a { color: var(--gold); font-size: 1.5rem; margin: 0 1rem; text-decoration: none; transition: color 0.3s; } 
-            .social-links a:hover { color: var(--soft-white); } 
-            footer p { font-size: 0.9rem; color: #999; } 
+            /* --- Footer Styles --- */
+            footer { 
+                background-color: var(--soft-black); 
+                color: var(--soft-white); 
+                padding: 3rem 0 1.5rem; 
+                text-align: center; 
+            } 
+        
+            footer .social-links { 
+                display: flex; 
+                justify-content: center; 
+                gap: 2rem; /* Space between icons */
+                margin-bottom: 2rem; 
+            } 
+        
+            footer .social-links a { 
+                display: inline-block;
+                color: var(--gold); 
+                transition: transform 0.3s, color 0.3s; 
+            }
+        
+            footer .social-links a:hover { 
+                transform: translateY(-3px); /* Subtle pop-up effect */
+                color: var(--gold-dark); 
+            }
+        
+            /* Size the icons */
+            footer .social-links svg {
+                width: 24px;
+                height: 24px;
+                fill: currentColor; /* Uses the text color defined in 'a' */
+            }
+
+            footer p { 
+                font-size: 0.9rem; 
+                color: #999; 
+            } 
             
             @media (max-width: 768px) { 
                 nav ul { flex-wrap: wrap; gap: 1rem; justify-content: center; } 
@@ -157,4 +189,5 @@
     </script>          
     </body>      
 </html>
+
 
