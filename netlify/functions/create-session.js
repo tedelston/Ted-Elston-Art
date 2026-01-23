@@ -1,39 +1,51 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async function(event, context) {
-  // --- SAFETY SHIELD START ---
-  // If the request is not a POST (e.g. a browser test) or has no body, ignore it.
-  if (event.httpMethod !== "POST" || !event.body) {
+  // Setup headers so Snipcart can read the response (CORS)
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Content-Type": "application/json"
+  };
+
+  // 1. Handle the "Can I talk to you?" check (OPTIONS request)
+  if (event.httpMethod === "OPTIONS") {
     return {
       statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
-      body: "OK"
+      headers,
+      body: JSON.stringify({ message: "Handshake received." })
     };
   }
-  // --- SAFETY SHIELD END ---
 
   try {
-    const body = JSON.parse(event.body);
-    const { invoice } = body;
+    // 2. Decode the Body (Fixes "Unexpected end of JSON" and "OK" errors)
+    // Sometimes Netlify encodes the message in Base64. We must decode it.
+    const rawBody = event.isBase64Encoded 
+       ? Buffer.from(event.body, 'base64').toString('utf8') 
+       : event.body;
 
-    // Validate that we actually have an invoice to process
-    if (!invoice || !invoice.items) {
-        console.error("Missing invoice data in request");
-        return { statusCode: 400, body: JSON.stringify({ error: "Missing invoice data" }) };
+    if (!rawBody) {
+       // If data is TRULY missing, tell us why instead of just saying "OK"
+       console.error("Empty Body received. Method:", event.httpMethod);
+       return { 
+         statusCode: 400, 
+         headers, 
+         body: JSON.stringify({ error: "Request body is empty", method: event.httpMethod }) 
+       };
     }
 
-    // Create the Stripe Checkout Session
+    const body = JSON.parse(rawBody);
+    const { invoice } = body;
+
+    // 3. Create the Stripe Checkout Session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card', 'klarna', 'afterpay_clearpay'], 
+      payment_method_types: ['card', 'klarna', 'afterpay_clearpay'],
       line_items: invoice.items.map(item => ({
         price_data: {
           currency: invoice.currency,
           product_data: {
             name: item.name,
-            description: item.description || item.name // Fallback if description is missing
+            description: item.description || item.name
           },
           unit_amount: Math.round(item.amount * 100), 
         },
@@ -46,18 +58,15 @@ exports.handler = async function(event, context) {
 
     return {
       statusCode: 200,
-      headers: { 
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*" // Allow Snipcart to read the response
-      },
+      headers,
       body: JSON.stringify({ url: session.url })
     };
 
   } catch (error) {
-    // Log the actual error so we can see it in Netlify logs
     console.error("Stripe Error:", error);
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ error: error.message })
     };
   }
