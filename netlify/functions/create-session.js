@@ -52,7 +52,7 @@ exports.handler = async function(event, context) {
         quantity: item.quantity,
       })),
       mode: 'payment',
-      success_url: `${process.env.URL}/.netlify/functions/confirm-payment?sessionId={CHECKOUT_SESSION_ID}&snipcartToken=${body.publicToken}`,
+      success_url: `https://tedelston.netlify.app/.netlify/functions/confirm-payment?sessionId={CHECKOUT_SESSION_ID}&snipcartToken=${body.publicToken}`,
       cancel_url: invoice.shippingAddress ? body.returnUrl : "https://tedelston.com",
     });
 
@@ -71,3 +71,4 @@ exports.handler = async function(event, context) {
     };
   }
 };
+
