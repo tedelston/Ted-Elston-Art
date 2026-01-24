@@ -36,17 +36,19 @@
                 right: auto; 
                 background-color: var(--gold); 
                 color: var(--soft-black); 
-                padding: 1rem 2rem; 
+                padding: 1.5rem 3rem; 
                 border-radius: 4px; 
                 font-weight: bold; 
-                box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
-                transform: translateY(150px); 
+                font-size: 1.2rem;
+                box-shadow: 0 4px 25px rgba(0,0,0,0.3); 
+                transform: translate(-50%, -50%) scale(0.9); 
                 opacity: 0; 
                 transition: all 0.3s ease-in-out; 
-                z-index: 9999999; 
+                z-index: 9999999;
+                pointer-events: none;
             }
             .cart-notification.show {
-                transform: translateY(0); 
+                transform: translate(-50%, -50%) scale(1); 
                 opacity: 1;
             }
 
