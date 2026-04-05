@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://tedelston.com/</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/about.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/commissions.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/contact.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/college-street-meows.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/college-street-meows-oil-painting.jpg</image:loc>
+      <image:title>College Street Meows - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/amcomri-street.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/amcomri-street-oil-painting.jpg</image:loc>
+      <image:title>Amcomri St - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/brain-on-rugs.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/brain-on-rugs-oil-painting.jpg</image:loc>
+      <image:title>This is Your Brain on Rugs - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/those-with-loaded-guns.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/those-with-loaded-guns-oil-painting.jpg</image:loc>
+      <image:title>Those with Loaded Guns - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/hearth-of-the-countryside.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/hearth-of-the-countryside-oil-painting.jpg</image:loc>
+      <image:title>Hearth of the Countryside - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/nature-finds-a-way.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/nature-finds-a-way-oil-painting.jpg</image:loc>
+      <image:title>Nature Finds a Way - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/sunset.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/sunset-oil-painting.jpg</image:loc>
+      <image:title>Sunset - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/the-fast-lane.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/the-fast-lane-oil-painting.jpg</image:loc>
+      <image:title>The Fast Lane - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/the-child.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/the-child-oil-painting.jpg</image:loc>
+      <image:title>The Child - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/lawrence.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/lawrence-oil-painting.jpg</image:loc>
+      <image:title>Lawrence - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/rory.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/rory-portrait-oil-painting.jpg</image:loc>
+      <image:title>Rory - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/jimi.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/jimi-portrait-oil-painting.jpg</image:loc>
+      <image:title>Jimi - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/jret.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/jret-oil-painting.jpg</image:loc>
+      <image:title>JRET - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/after-a-long-hard-day.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/after-a-long-hard-day-oil-painting.jpg</image:loc>
+      <image:title>After a Long Hard Day - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/friendly-neighbourhood.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/friendly-neighbourhood-oil-painting.jpg</image:loc>
+      <image:title>Friendly Neighbourhood - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/a-dark-night.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/a-dark-night-oil-painting.jpg</image:loc>
+      <image:title>A Dark Night - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/be-like-water.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/be-like-water-oil-painting.jpg</image:loc>
+      <image:title>Be Like Water - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/jt28.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/jt28-oil-painting.jpg</image:loc>
+      <image:title>JT28 - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/dads-project.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/dads-project-oil-painting.jpg</image:loc>
+      <image:title>Dad's Project - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/bullitt.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/bullitt-oil-painting.jpg</image:loc>
+      <image:title>Bullitt - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/bel-air-sunset.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/bel-air-sunset-oil-painting.jpg</image:loc>
+      <image:title>Bel Air Sunset - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/shaken-not-stirred.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/shaken-not-stirred-oil-painting.jpg</image:loc>
+      <image:title>Shaken not Stirred - Oil on Paper by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/mad-flavours.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/mad-flavours-oil-painting.jpg</image:loc>
+      <image:title>Mad Flavours - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/psychonaut.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/psychonaut-oil-painting.jpg</image:loc>
+      <image:title>Psychonaut - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tedelston.com/gallery/breakthrough.html</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tedelston.com/breakthrough-oil-painting.jpg</image:loc>
+      <image:title>Breakthrough - Oil on Canvas by Ted Elston</image:title>
+    </image:image>
+  </url>
+
+</urlset>
